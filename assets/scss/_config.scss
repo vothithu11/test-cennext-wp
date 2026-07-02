@@ -1,0 +1,15 @@
+:root {
+  --c-tx: #414F60;
+  --c-bg: #FFFFFF;
+  --c-bg-alter: #F4F3F8;
+
+  --pad-x: 1rem;
+  --w-container: calc(2 * var(--pad-x) + 60rem); // 960px
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --pad-x: 2rem;
+  }
+}
+
