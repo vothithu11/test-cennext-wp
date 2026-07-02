@@ -1,6 +1,5 @@
 <?php
-function cennos_tms_interview_enqueue_assets()
-{
+function cennos_tms_interview_enqueue_assets() {
     wp_enqueue_style(
         'main-style',
         get_template_directory_uri() . '/assets/dist/style.min.css',
@@ -8,26 +7,26 @@ function cennos_tms_interview_enqueue_assets()
         false
     );
 
-    wp_enqueue_style(
-        'swiper-css',
-        'https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css',
+     wp_enqueue_style(
+        'splide-style',
+        "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css",
         [],
-        null
+        false
     );
 
     wp_enqueue_script(
-        'main-js',
-        get_template_directory_uri() . '/assets/dist/production.min.js',
-        ['swiper-js'],
+        'splide-js',
+        "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js",
+        [],
         false,
         true
     );
 
     wp_enqueue_script(
-        'swiper-js',
-        'https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js',
-        [],
-        null,
+        'main-js',
+        get_template_directory_uri() . '/assets/dist/production.min.js',
+        ['splide-js'],
+        false,
         true
     );
 }

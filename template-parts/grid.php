@@ -4,8 +4,8 @@
       <img src="https://picsum.photos/888/500" />
     </div>
     <div class="col-6">
-      <h3>About Cennos</h3>
-      <p>We manage your e-commerce complexities by delivering streamline digital and data solutions. Our consultants will work with you to understand your needs and build a customized  solution for your business.</p>
+      <h3>About Our Company</h3>
+      <p>Content here...</p>
     </div>
   </div>
 </section>

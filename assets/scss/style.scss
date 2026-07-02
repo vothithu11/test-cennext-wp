@@ -49,13 +49,10 @@ $gray: #f1f1f1;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
-  &--2 {
-    max-width: 1280px;
-    padding: 0;
-  }
 
-  &.row {
+  .row {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .col-6 {
@@ -82,7 +79,6 @@ $gray: #f1f1f1;
   .menu-toggle {
     display: none;
     cursor: pointer;
-    padding: 5px 10px;
   }
 
   .main-navigation {
@@ -100,31 +96,12 @@ $gray: #f1f1f1;
 
     .menu-toggle {
       display: block;
-      z-index: 20;
-    }
-
-    .logo {
-      z-index: 20;
-    }
-
-    .menu ul {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     }
   }
 }
 
 /* BUG: wrong selector (should be .main-navigation.active) */
-.main-navigation.active {
+.main-nav.active {
   display: block;
 }
 
@@ -132,7 +109,7 @@ $gray: #f1f1f1;
    Hero
 ========================= */
 
-.hero.swiper {
+.hero {
   background: url('https://picsum.photos/1400/500') center/cover no-repeat;
   color: white;
   text-align: center;
@@ -174,75 +151,24 @@ $gray: #f1f1f1;
   gap: 20px;
   overflow-x: auto;
   padding: 20px;
-  margin: 50px 0;
-
-  .swiper-button-prev {
-    width: 10px;
-  }
-
-   .swiper-button-next {
-    width: 10px;
-  }
-
-  .swiper-navigation-icon {
-    color: #333;
-  }
-
-  .swiper-wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 
   .carousel-item {
     min-width: 250px;
     background: $secondary;
     color: white;
-    // padding: 10px;
+    padding: 10px;
     position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-    aspect-ratio: 180/192;
-
-    .carousel-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .carousel-title {
-      font-size: 16px;
-    }
 
     .desc {
-      display: inline-flex!important;
+      display: none;
       position: absolute;
       bottom: 0;
       background: rgba(0,0,0,0.7);
       width: 100%;
       padding: 10px;
-      transition: 0.3s all ease-in-out;
-      font-size: 12px;
-      cursor: pointer;
-      text-align: center;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .detail {
-      display: none;
     }
 
     &:hover .desc {
-      height: 100%;
-            background: rgba(65, 79, 96, 0.8);
-    }
-
-    &:hover .message {
-      display: none;
-    }
-
-    &:hover .detail {
       display: block;
     }
   }
@@ -282,8 +208,7 @@ $gray: #f1f1f1;
       display: none;
 
       &.active {
-        display: inline-flex;
-        gap: 20px;
+        display: block;
       }
     }
   }

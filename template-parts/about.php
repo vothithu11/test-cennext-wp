@@ -15,5 +15,3 @@ $about = get_field('sect_about');
     </div>
   </div>
 </section>
-
-

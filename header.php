@@ -16,6 +16,7 @@
       <?php wp_nav_menu(['theme_location' => 'menu-1']); ?>
     </nav>
 
-    <button class="menu-toggle">MENU</button>
+    <button class="menu-toggle" id="menu-open">MENU =</button>
+    <button class="menu-toggle" id="menu-close">MENU x</button>
   </div>
 </header>

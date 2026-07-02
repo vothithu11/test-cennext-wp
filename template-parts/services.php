@@ -1,4 +1,4 @@
-<section class="services container">
+<section class="services">
   <h2>Our Services</h2>
 
   <div class="tabs">
